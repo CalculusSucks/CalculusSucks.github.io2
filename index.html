@@ -128,6 +128,8 @@
         const ele = document.getElementsByClassName("wrapperC")[0];
         ele.style.cursor = "grab";
 
+	var dragging = false;      
+	   console.log(dragging)    
         let pos = { left: 0, x: 0 };
 
         const mouseDownHandler = function (e) {
@@ -147,7 +149,8 @@
         const mouseMoveHandler = function (e) {
           // How far the mouse has been moved
           const dx = e.clientX - pos.x;
-
+	  dragging = true;
+		 console.log(dragging)
           // Scroll the element
           ele.scrollLeft = pos.left - dx;
         };
@@ -155,7 +158,9 @@
         const mouseUpHandler = function () {
           ele.style.cursor = "grab";
           ele.style.removeProperty("user-select");
-
+		
+	  setTimeout(function(){dragging = false; console.log(dragging)}, 500);
+	  
           document.removeEventListener("mousemove", mouseMoveHandler);
           document.removeEventListener("mouseup", mouseUpHandler);
         };
