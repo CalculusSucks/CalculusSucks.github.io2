@@ -17,6 +17,127 @@
     width: 17rem !important;
 }
 	</style>
+	
+	    <style>
+      html {
+        font-family: Arial;
+        color: rgb(0, 0, 0);
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+
+      .wrapper {
+        display: flex;
+        overflow: auto;
+        cursor: grab;
+      }
+
+      .wrapper::-webkit-scrollbar {
+        width: 0;
+      }
+
+      .wrapper .item {
+        min-width: 234px; /* was 180px */
+        height: 110px;
+        line-height: 1.5;
+        padding: 0px 5px 0px 0px;
+        margin: 0px 1px 0px 0px;
+        height: fit-content;
+      }
+
+      .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 30ch;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .author {
+        font-size: 14px;
+        display: inline-block;
+      }
+
+      span a:hover {
+        color: #c9910c !important;
+      }
+
+      a:hover {
+        color: #f3af0e !important;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .thumbnail {
+        width: max-width;
+        height: 110px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 5px;
+      }
+
+      .avatar {
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .au {
+        float: right;
+        padding-top: 5px;
+        padding-left: 5px;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ele = document.getElementsByClassName("wrapper")[0];
+        ele.style.cursor = "grab";
+
+        let pos = { left: 0, x: 0 };
+
+        const mouseDownHandler = function (e) {
+          ele.style.cursor = "grabbing";
+          ele.style.userSelect = "none";
+
+          pos = {
+            left: ele.scrollLeft,
+            // Get the current mouse position
+            x: e.clientX
+          };
+
+          document.addEventListener("mousemove", mouseMoveHandler);
+          document.addEventListener("mouseup", mouseUpHandler);
+        };
+
+        const mouseMoveHandler = function (e) {
+          // How far the mouse has been moved
+          const dx = e.clientX - pos.x;
+
+          // Scroll the element
+          ele.scrollLeft = pos.left - dx;
+        };
+
+        const mouseUpHandler = function () {
+          ele.style.cursor = "grab";
+          ele.style.removeProperty("user-select");
+
+          document.removeEventListener("mousemove", mouseMoveHandler);
+          document.removeEventListener("mouseup", mouseUpHandler);
+        };
+
+        // Attach the handler
+        ele.addEventListener("mousedown", mouseDownHandler);
+      });
+    </script>
 </head>
 
 <body>
@@ -235,17 +356,215 @@
 				<header class="work__header">
 					<p class="work__header__description" data-animation="paragraph" style="margin-left: auto;margin-right: auto;width: 330px;margin-top: calc(-20% - 300px);background: #ffffff21;padding: 20px 20px 20px 20px;color: #fbf7ed;">Yasser Noori is a website designer and social media website developer. Based in Toronto, Canada.</p>
 
+    <div class="wrapper" onmousedown="return false">
+      <div class="item">
+        <div
+          class="thumbnail"
+          style="
+            background-image: url('https://advhead.com/wp-content/uploads/2021/12/IMG-20180705-WA0002-scaled-1.jpeg');
+          "
+        ></div>
 
-					<p class="work__header__date"><span class=
-					"work__header__date__text">2010</span><span class=
-					"work__header__date__dash"></span><span class=
-					"work__header__date__text">2022</span>
-					</p>
+        <div class="title">
+          <a
+            href="https://advhead.com/les-a-les-1999-a-minha-experiencia-em-05-07-2018/"
+            target="_top"
+            >Lés a Lés 1999 &#8211; A minha experiência em 05.07.2018</a
+          >
+        </div>
+
+        <div class="author">
+          <a href="/members/jorgecasais" target="_top"
+            ><div
+              class="avatar"
+              style="
+                background-image: url('https://advhead.com/wp-content/uploads/avatars/3/62f98340670e1-bpfull.jpg');
+              "
+            ></div
+          ></a>
+          <a
+            class="au"
+            ref="/members/jorgecasais"
+            target="_top"
+            style="padding-bottom: 5px; !important"
+            >Jorge</a
+          >
+        </div>
+      </div>
+
+      <div class="item">
+        <div
+          class="thumbnail"
+          style="
+            background-image: url('https://advhead.com/wp-content/uploads/2021/12/IMG-20181113-WA0019.jpg');
+          "
+        ></div>
+
+        <div class="title">
+          <a href="https://advhead.com/30-10-2018/" target="_top">30.10.2018</a>
+        </div>
+
+        <div class="author">
+          <a href="/members/jorgecasais" target="_top"
+            ><div
+              class="avatar"
+              style="
+                background-image: url('https://advhead.com/wp-content/uploads/avatars/3/62f98340670e1-bpfull.jpg');
+              "
+            ></div
+          ></a>
+          <a
+            class="au"
+            ref="/members/jorgecasais"
+            target="_top"
+            style="padding-bottom: 5px; !important"
+            >Jorge</a
+          >
+        </div>
+      </div>
+
+      <div class="item">
+        <div
+          class="thumbnail"
+          style="
+            background-image: url('https://advhead.com/wp-content/uploads/2021/12/Imagem-10.jpg');
+          "
+        ></div>
+
+        <div class="title">
+          <a
+            href="https://advhead.com/31-12-2018-ultimo-passeio-do-ano-em-modos-off-e-on-road/"
+            target="_top"
+            >31.12.2018 Último passeio do ano em modos Off e On Road</a
+          >
+        </div>
+
+        <div class="author">
+          <a href="/members/jorgecasais" target="_top"
+            ><div
+              class="avatar"
+              style="
+                background-image: url('https://advhead.com/wp-content/uploads/avatars/3/62f98340670e1-bpfull.jpg');
+              "
+            ></div
+          ></a>
+          <a
+            class="au"
+            ref="/members/jorgecasais"
+            target="_top"
+            style="padding-bottom: 5px; !important"
+            >Jorge</a
+          >
+        </div>
+      </div>
+
+      <div class="item">
+        <div
+          class="thumbnail"
+          style="
+            background-image: url('https://advhead.com/wp-content/uploads/2021/12/Imagem1-170.jpg');
+          "
+        ></div>
+
+        <div class="title">
+          <a
+            href="https://advhead.com/01-01-2019-primeiro-passeio-do-ano-em-modos-on-e-off-road/"
+            target="_top"
+            >01.01.2019 Primeiro Passeio do ano em modos On e Off Road</a
+          >
+        </div>
+
+        <div class="author">
+          <a href="/members/jorgecasais" target="_top"
+            ><div
+              class="avatar"
+              style="
+                background-image: url('https://advhead.com/wp-content/uploads/avatars/3/62f98340670e1-bpfull.jpg');
+              "
+            ></div
+          ></a>
+          <a
+            class="au"
+            ref="/members/jorgecasais"
+            target="_top"
+            style="padding-bottom: 5px; !important"
+            >Jorge</a
+          >
+        </div>
+      </div>
+
+      <div class="item">
+        <div
+          class="thumbnail"
+          style="
+            background-image: url('https://advhead.com/wp-content/uploads/2021/12/Imagem1-181.jpg');
+          "
+        ></div>
+
+        <div class="title">
+          <a
+            href="https://advhead.com/05-01-2019-classificativa-de-amarante-na-companhia-do-emanuel/"
+            target="_top"
+            >05.01.2019 Classificativa de Amarante na companhia do Emanuel</a
+          >
+        </div>
+
+        <div class="author">
+          <a href="/members/jorgecasais" target="_top"
+            ><div
+              class="avatar"
+              style="
+                background-image: url('https://advhead.com/wp-content/uploads/avatars/3/62f98340670e1-bpfull.jpg');
+              "
+            ></div
+          ></a>
+          <a
+            class="au"
+            ref="/members/jorgecasais"
+            target="_top"
+            style="padding-bottom: 5px; !important"
+            >Jorge</a
+          >
+        </div>
+      </div>
+
+      <div class="item">
+        <div
+          class="thumbnail"
+          style="
+            background-image: url('https://advhead.com/wp-content/uploads/2021/12/Imagem1-191.jpg');
+          "
+        ></div>
+
+        <div class="title">
+          <a
+            href="https://advhead.com/06-01-2019-passeio-zes-a-les-campea-ate-cais-de-gaia/"
+            target="_top"
+            >06.01.2019 Passeio Zés a Lés (Campeã até cais de Gaia)</a
+          >
+        </div>
+
+        <div class="author">
+          <a href="/members/jorgecasais" target="_top"
+            ><div
+              class="avatar"
+              style="
+                background-image: url('https://advhead.com/wp-content/uploads/avatars/3/62f98340670e1-bpfull.jpg');
+              "
+            ></div
+          ></a>
+          <a
+            class="au"
+            ref="/members/jorgecasais"
+            target="_top"
+            style="padding-bottom: 5px; !important"
+            >Jorge</a
+          >
+        </div>
+      </div>
 
 
-					<h2 class="work__header__title" data-animation="paragraph">
-					<span>Welcome&nbsp;</span><span>To&nbsp;</span><span>The&nbsp;</span><span>Interverse&nbsp;</span>
-					</h2>
+    </div>
 				</header>
 
 
