@@ -124,11 +124,12 @@
     </style>
 
     <script>
+	    var dragging = false; 
       document.addEventListener("DOMContentLoaded", function () {
         const ele = document.getElementsByClassName("wrapperC")[0];
         ele.style.cursor = "grab";
 
-	var dragging = false;      
+	 dragging = false;      
 	   console.log(dragging)    
         let pos = { left: 0, x: 0 };
 
