@@ -17,144 +17,6 @@
     width: 17rem !important;
 }
 	</style>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-  <style>
-
-html {
-  font-family: Arial;
-  color: rgb(0, 0, 0);
-}
-
-a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-
-}
-
-
-
-.wrapper {
-  display: flex;
-  overflow: auto;
-  cursor: grab;
-}
-
-.wrapper::-webkit-scrollbar {
-  width: 0;
-}
-
-.wrapper .item {
-  min-width: 234px; /* was 180px */
-  height: 110px;
-  line-height: 1.5;
-  padding: 0px 5px 0px 0px;
-  margin: 0px 1px 0px 0px;
-  height: fit-content;
-}
-
-
-.title {
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-max-width: 30ch;
-font-weight: bold;
-font-size: 18px;
-}
-
-.author {
-font-size: 14px;
-display:inline-block;
-}
-
-span a:hover {
-  color: #c9910c !important;
-}
-
-a:hover {
-  color: #f3af0e !important;
-}
-
-::-webkit-scrollbar {
-display: none;
-}
-
-.thumbnail {
-  width: max-width;
-  height: 110px;
-  background-position: center;
-  background-size: cover;
-  border-radius: 5px;
-}
-
-.avatar {
-  background-size: cover;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  display:inline-block;
-}
-
-.au {
-  float: right;
-  padding-top: 5px;
-  padding-left:5px;
-}
-
-</style>
-
-<script>
-          document.addEventListener('DOMContentLoaded', function () {
-              const ele = document.getElementsByClassName('wrapper')[0];
-              ele.style.cursor = 'grab';
-
-              let pos = {left: 0, x: 0};
-
-              const mouseDownHandler = function (e) {
-                  ele.style.cursor = 'grabbing';
-                  ele.style.userSelect = 'none';
-
-                  pos = {
-                      left: ele.scrollLeft,
-                      // Get the current mouse position
-                      x: e.clientX,
-                  };
-
-                  document.addEventListener('mousemove', mouseMoveHandler);
-                  document.addEventListener('mouseup', mouseUpHandler);
-              };
-
-              const mouseMoveHandler = function (e) {
-                  // How far the mouse has been moved
-                  const dx = e.clientX - pos.x;
-
-                  // Scroll the element
-                  ele.scrollLeft = pos.left - dx;
-              };  
-
-              const mouseUpHandler = function () {
-                  ele.style.cursor = 'grab';
-                  ele.style.removeProperty('user-select');
-
-                  document.removeEventListener('mousemove', mouseMoveHandler);
-                  document.removeEventListener('mouseup', mouseUpHandler);
-              };
-
-              // Attach the handler
-              ele.addEventListener('mousedown', mouseDownHandler);
-          });
-</script>
-	
-	
 </head>
 
 <body>
@@ -374,33 +236,18 @@ display: none;
 					<p class="work__header__description" data-animation="paragraph" style="margin-left: auto;margin-right: auto;width: 330px;margin-top: calc(-20% - 300px);background: #ffffff21;padding: 20px 20px 20px 20px;color: #fbf7ed;">Yasser Noori is a website designer and social media website developer. Based in Toronto, Canada.</p>
 
 
-					
-					
-					
-					
-					
-					
-					
-					
-			
-					
-					
+					<p class="work__header__date"><span class=
+					"work__header__date__text">2010</span><span class=
+					"work__header__date__dash"></span><span class=
+					"work__header__date__text">2022</span>
+					</p>
+
+
+					<h2 class="work__header__title" data-animation="paragraph">
+					<span>Welcome&nbsp;</span><span>To&nbsp;</span><span>The&nbsp;</span><span>Interverse&nbsp;</span>
+					</h2>
 				</header>
 
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
 
 				<div class="work__list">
 					<article class="work__item work__item--1">
