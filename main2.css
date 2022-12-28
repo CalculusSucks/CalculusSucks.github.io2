@@ -4,7 +4,10 @@
     width: 17rem !important;
 }
 
-
+.loaderglobe {
+width:1000px;
+height:1000px;
+}
 .wrapperC {
 		margin-top: calc(17% + 7px); 	
 	}
@@ -24,6 +27,11 @@
     display: block;
     min-width: 70px;
     width: 10rem !important;
+}
+	
+	.loaderglobe {
+width:400px;
+height:400px;
 }
 }
 		
