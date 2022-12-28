@@ -1,4 +1,4 @@
-	.intro__media, .intro__media__image, .menu, .menu__background, .navigation, .navigation__list, .navigation__wrapper, .preloader, .preloader__box {
+	.intro__media, .intro__media__image, .menu, .menu__background, .navigation, .navigation__list, .navigation__wrapper, .preloader__box {
 		height: 100%;
 		left: 0;
 		-o-object-fit: cover;
@@ -9,10 +9,6 @@
 		
 	}
 
-.preloader {
-	
-align-content: center;	
-}
 
 	.dg.ac {
 		z-index: 99999!important
@@ -578,7 +574,6 @@ align-content: center;
 	.preloader {
 		background: #fbf7ed;
 		overflow: hidden;
-		position: fixed;
 		z-index: 6
 	}
 
