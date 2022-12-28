@@ -14,8 +14,7 @@
 }
 
 .loaderglobe {
-width:800px;
-height:800px;
+width:calc(30% + 200px);
  display: block;
   margin-left: auto;
   margin-right: auto;
