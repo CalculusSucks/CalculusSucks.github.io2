@@ -1,10 +1,5 @@
 .preloader {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);	
+content-align:center;
 }
 
 .navigation__logo__media {
@@ -14,8 +9,8 @@
 }
 
 .loaderglobe {
-width:1200px;
-height:1200px
+width:900px;
+height:900px
 }
 .wrapperC {
 		margin-top: calc(17% + 7px); 	
