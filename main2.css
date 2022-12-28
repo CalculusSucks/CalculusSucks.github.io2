@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  display: block;
 }
 
 .navigation__logo__media {
@@ -19,6 +20,13 @@ height:900px;
   margin-left: auto;
   margin-right: auto;
 }
+
+.preloader > svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .wrapperC {
 		margin-top: calc(17% + 7px); 	
 	}
