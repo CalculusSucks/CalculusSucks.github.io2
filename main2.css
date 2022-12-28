@@ -13,6 +13,9 @@
 .loaderglobe {
 width:900px;
 height:900px;
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .wrapperC {
 		margin-top: calc(17% + 7px); 	
