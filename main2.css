@@ -1,4 +1,11 @@
-	.wrapperC {
+.navigation__logo__media {
+    display: block;
+    min-width: 70px;
+    width: 17rem !important;
+}
+
+
+.wrapperC {
 		margin-top: calc(17% + 7px); 	
 	}
 		
@@ -12,6 +19,12 @@
 	.wrapperC {
 		margin-top: calc(10% + 30px); 	
 	}
+	
+	.navigation__logo__media {
+    display: block;
+    min-width: 70px;
+    width: 10rem !important;
+}
 }
 		
 @media screen and (max-width: 2500px) {		
@@ -28,11 +41,7 @@
     border: 1px solid rgba(209, 213, 219, 0.3);
 }
 		
-.navigation__logo__media {
-    display: block;
-    min-width: 70px;
-    width: 17rem !important;
-}
+
 
       html {
         font-family: Arial;
