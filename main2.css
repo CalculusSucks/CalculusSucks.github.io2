@@ -24,7 +24,8 @@ width:calc(30% + 200px);
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: calc(20% + 200px);	
+  width: calc(20% + 200px);
+  margin-top: -50px;
 }
 
 .wrapperC {
