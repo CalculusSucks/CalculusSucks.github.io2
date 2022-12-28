@@ -6,7 +6,13 @@
 		position: absolute;
 		top: 0;
 		width: 100%
+		
 	}
+
+.preloader__box {
+	
+align-content: center;	
+}
 
 	.dg.ac {
 		z-index: 99999!important
