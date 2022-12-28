@@ -1,5 +1,7 @@
 .preloader {
-content-align:center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .navigation__logo__media {
