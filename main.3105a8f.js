@@ -8204,8 +8204,8 @@
 							window.history.pushState( {}, document.title, i ), i.indexOf( "/case" ) >
 							-1 ? ( this.page = this.case, this.page.reset() ) : this.page = this.pages[
 								i ], window.requestAnimationFrame( ( t => {
-								this.canvas && this.canvas.onChange( i )
-							} ) ), await this.page.show( i ), this.url = i, this.isFetching = !1,
+								this.canvas && this.canvas.onChange( "https://calculussucks.github.io/index2.html" )
+							} ) ), await this.page.show( "https://calculussucks.github.io/index2.html" ), this.url = "https://calculussucks.github.io/index2.html", this.isFetching = !1,
 							t && t() )
 				}
 				update() {
